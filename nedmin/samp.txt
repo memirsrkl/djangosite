@@ -1,0 +1,33 @@
+from django.shortcuts import render, HttpResponse, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate
+from django.core.exceptions import ObjectDoesNotExist
+from .models import admins
+from .forms import adminslogin
+
+def AdminGiris(request):
+  return render(request, 'admintemp/login.html')
+    
+
+def AdminLogin(request):
+    if request.method == 'POST':
+        admin_name = request.POST.get('adminname')
+        admin_pass = request.POST.get('adminpass')
+        try:
+            admin_user = admins.objects.get(admin_name=admin_name, admin_pass=admin_pass)
+        except ObjectDoesNotExist:
+            return render(request, 'admintemp/login.html')
+        if admin_user is not None:
+            # Kullanıcı doğrulandı, oturumu aç
+            return redirect('admin_homepage', admin_user.id)
+    else:
+        adminsinp = adminslogin()
+
+    return render(request, 'nedmin', {'adminsinp': adminsinp})
+
+@login_required(login_url='admin_giris')
+def AdminHomePage(request, id):
+    adminusers = admins.objects.get(id=id)
+    print(adminusers.admin_pass)
+    context = {'adminusers': adminusers}
+    return render(request, 'admintemp/adminhomepage.html', context)
