@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sider Menu Bar CSS</title>
+    <link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" href="/static/sample.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-j2NLod5Y5yJukS4zHtTPRyAuNqI9y2rtN8dNvAdEYoTweDHiyOTqrg6KrV6aThetWn4TJOe6BzqumZibcP8ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+	</head>
+  <body>
+
+    <div class="container-fluid">
+			
+			<div class="container-left">
+				<div class="wrapper">
+						</div>
+						<div class="wrapper">
+						<div class="menu">
+							<ul class="menu-list">
+
+								<li class="voce-menu {% if active_page == 'user_info/adminusers.id' %}active{% endif %}">
+										<a href="" class="effect effect2" data-page="{% url 'user_info_url_name' adm.id %}">Kullanıcı Bilgileri</a>
+								</li>
+								<li class="voce-menu {% if active_page == 'contact' %}active{% endif %}">
+										<a href="#" class="effect effect3" data-page="{% url 'contact_url_name' %}">Yazılar</a>
+								</li>
+								<li class="voce-menu {% if active_page == 'add_post' %}active{% endif %}">
+										<a href="#" class="effect effect4" data-page="{% url 'add_post_url_name' %}">Yazı Ekle</a>
+								</li>
+								<li class="voce-menu {% if active_page == 'new_page' %}active{% endif %}">
+										<a href="{% url 'logoutadmin' %}" class="effect effect5" data-page="{% url 'new_page_url_name' %}">Yeni Sayfa</a>
+								</li>
+								<li class="">
+										<a href="{% url 'logoutadmin' %}" class="effect effect6">Çıkış Yap</a>
+								</li>
+						</ul>
+						</div>
+				</div>
+		</div>
+			
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			// jQuery kullanarak içeriği değiştirme
+			$(document).ready(function() {
+					$(".voce-menu a").click(function(e) {
+							e.preventDefault(); // Sayfanın yenilenmesini önlemek için
+							var page = $(this).data("page");
+							loadContent(page);
+					});
+	
+					function loadContent(page) {
+							$.ajax({
+									url: page,
+									success: function(data) {
+											$("#contentWrapper").html(data);
+									},
+									error: function() {
+											alert("Sayfa yüklenirken bir hata oluştu.");
+									}
+							});
+					}
+			});
+	</script>
+  </body>
+	<script>
+		function refreshPage() {
+    location.reload(); // Sayfayı yenile
+}
+	</script>
+</html>

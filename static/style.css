@@ -1,0 +1,337 @@
+/*********************
+ Style css
+*********************/
+
+/*FONT*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Varela+Round|Merienda+One');
+
+
+h1,h2,h3,h4,h6{
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	}
+
+/*STILE HEADINGS*/
+h1{
+	font-size: 3.375em;
+	}
+
+p{
+	font-size: 1.125em;
+}
+
+/*Layout*/
+
+html, body {
+  height: 100%;
+  display: block;
+  margin: 0px;
+  background-color: #fff;
+ }
+
+.wrapper{
+	padding: 1.5em 0;
+	margin: 0 auto;
+}
+.container{
+	display: block;
+	min-height: 100%;
+	}
+
+.container-left {
+    display: block;
+    width: 20%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    color: #f2f2f2;
+        /* background-color: #252221; */
+    background-color: #030303;
+    }
+
+.container-right{
+	display: block;
+	width: 80%;
+	max-width: 75%;
+	min-height: 90%;	
+	background-color: white;
+	float:left;
+	position: static;
+	margin-left: 22%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	display: flex;
+  flex-direction: column;
+	
+	
+}
+
+.menu{
+	display: block;
+	text-align: center;
+	}
+
+.menu-list{
+	list-style-type: none;
+    padding: 0px;
+    width: 100%;
+}
+
+.voce-menu{
+	
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size:1.2em;
+    width: 100%;
+    
+}
+
+
+/*Effect menu */
+
+.effect {
+	position:relative;
+	display:inline-block;
+	text-decoration:none;
+	padding:5px;
+	}
+	
+/*MENU effect 2*/	
+.effect2 {
+	color:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect2:hover {
+	color:#F44336;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect2:before {
+	position:absolute;
+	bottom:-3px;
+	content:" ";
+	display:block;
+	width:0;
+	height:2px;
+	background:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect2:hover:before{
+	width:100%;
+	background:#F44336;
+	}
+
+/*MENU effect 3*/
+
+.effect3 {
+	color:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect3:hover {
+	color:#4caf50;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect3:before {
+	position:absolute;
+	bottom:-3px;
+	content:" ";
+	display:block;
+	width:0;
+	height:2px;
+	background:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect3:hover:before{
+	width:100%;
+	background:#4caf50;
+	}
+
+/*MENU effect 4*/
+
+.effect4 {
+	color:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect4:hover {
+	color:#FF9800;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect4:before {
+	position:absolute;
+	bottom:-3px;
+	content:" ";
+	display:block;
+	width:0;
+	height:2px;
+	background:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect4:hover:before{
+	width:100%;
+	background:#FF9800;
+	}
+
+/*MENU effect 5*/
+
+.effect5 {
+	color:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect5:hover {
+	color:#2196f3;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect5:before {
+	position:absolute;
+	bottom:-3px;
+	content:" ";
+	display:block;
+	width:0;
+	height:2px;
+	background:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect5:hover:before{
+	width:100%;
+	background:#2196f3;
+	}
+
+/*MENU effect 6*/
+
+.effect6 {
+	color:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect6:hover {
+	color:#ff00e0;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect6:before {
+	position:absolute;
+	bottom:-3px;
+	content:" ";
+	display:block;
+	width:0;
+	height:2px;
+	background:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect6:hover:before{
+	width:100%;
+	background:#ff00e0;
+	}
+
+/*MENU effect 7*/
+.effect7 {
+	color:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect7:hover {
+	color:#ffeb3b;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect7:before {
+	position:absolute;
+	bottom:-3px;
+	content:" ";
+	display:block;
+	width:0;
+	height:2px;
+	background:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect7:hover:before{
+	width:100%;
+	background:#ffeb3b;
+	}
+
+/*MENU effect 8*/
+
+.effect8 {
+	color:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect8:hover {
+	color:#E91E63;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect8:before {
+	position:absolute;
+	bottom:-3px;
+	content:" ";
+	display:block;
+	width:0;
+	height:2px;
+	background:#f2f2f2;
+	-ms-transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s; 
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	}
+.effect8:hover:before{
+	width:100%;
+	background:#E91E63;
+	}

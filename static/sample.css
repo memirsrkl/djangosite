@@ -1,0 +1,72 @@
+.container-right .container  {
+margin-bottom:20px;
+display: block;
+border-bottom: 1px;
+
+}
+
+.container-right .container #resimyeri, #baslikyeri,#icerikyeri  {
+  height: 70px;
+  position: relative;
+
+  }
+  .container-right .container #resimyeri img  {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    border-right: 1px solid;
+    
+    }
+    .container-right .container #resimyeri   {
+      width: 15%;
+      display: flex;
+      align-items: center; /* Dikeyde ortalamak için */
+      justify-content: center;
+      
+      }
+.container-right .container #baslikyeri{
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ display: flex;
+  align-items: center; /* Dikeyde ortalamak için */
+  justify-content: center;
+  width: 20%;
+ 
+}
+.container-right .container #baslikyeri p{
+  display: flex;
+  align-items: center; /* Dikeyde ortalamak için */
+  justify-content: center;
+  text-align: center;
+  font-size: 80%;
+  
+  
+ }
+ 
+ .container-right .container #icerikyeri {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Metni en fazla 3 satıra sınırlar */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+  font-size: 10px;
+  width: 55%;
+ }
+ .container-right .container #icerikyeri p {
+  padding: 1%;
+ }
+ .container-right .container #butonyeri {
+  
+  width: 10%;
+ }
+ @media (max-width: 768px) {
+  .container-right .container #resimyeri{
+    display: none; /* Fotoğrafları gizle */
+  }
+  .container-right .container #baslikyeri{
+ 
+     width: 30%;
+    
+   }
+
+}
+ 

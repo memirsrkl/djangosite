@@ -1,0 +1,54 @@
+<div class="container-right">
+  <div class="wrapper">
+      <p>Merhaba {{adm.admin_realname}} {{adm.admin_surname}}</p>
+      <form action="/update/{{adm.id}}" method="post">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Kullanıcı Adı</label>
+            <input type="text" class="form-control" id="inputEmail4" name="admin_name" value={{adm.admin_name}}>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Şifre</label>
+            <input type="text" class="form-control" id="inputPassword4"name="admin_pass" value="{{adm.admin_pass}}">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">İsim</label>
+            <input type="text" class="form-control" id="inputEmail4" name="admin_realname" value="{{adm.admin_realname}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Soyisim</label>
+            <input type="text" class="form-control" id="inputPassword4" name="admin_surname" value={{adm.admin_surname}}>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Adres</label>
+          <input type="text" class="form-control" id="inputAddress" name="admin_adress" value="{{adm.admin_adress}}">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="inputCity">İnstagram</label>
+            <input type="text" class="form-control" id="inputCity" name="admin_insta" value={{adm.admin_insta}}>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputState">Twitter</label>
+            <input type="text" class="form-control" id="inputZip" name="admin_twitter" value={{adm.admin_twitter}}>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputZip">Email</label>
+            <input type="text" class="form-control" id="email" name="admin_email" value={{adm.admin_email}}>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="phone">Telefon Numarası</label>
+            <input type="phone" class="form-control" id="admin_phone" name="admin_phone" value={{adm.admin_phone}}>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Değiştir</button>
+      </form>
+  </div>	
+</div>
+<script>
+
+</script>

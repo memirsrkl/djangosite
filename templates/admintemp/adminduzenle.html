@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sider Menu Bar CSS</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+			
+			<div class="container-left">
+				<div class="wrapper">
+				</div>
+				<div class="wrapper">
+				<div class="menu">
+					<ul class="menu-list">
+						<li class="voce-menu"><a href="#" class="effect effect2">Kullanıcı Bilgileri</a></li>
+						<li class="voce-menu"><a href="#" class="effect effect3">İletişim</a></li>
+						<li class="voce-menu"><a href="#" class="effect effect4">Yazı Ekle</a></li>
+						<li class="voce-menu"><a href="#" class="effect effect5">Yeni Sayfa</a></li>
+						<li class="voce-menu"><a href="{% url 'logoutadmin' %}" class="effect effect6">Çıkış Yap</a></li>
+					</ul>
+					</div>
+			</div>
+		</div>
+			<div class="container-right">
+				<div class="wrapper">
+            <p>Merhaba {{admincik.admin_realname}} {{admincik.admin_surname}}</p>
+						<form>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Kullanıcı Adı</label>
+									<input type="text" class="form-control" id="inputEmail4" name="admin_name" value={{admincik.admin_name}}>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">Şifre</label>
+									<input type="text" class="form-control" id="inputPassword4"name="admin_pass" value="{{admincik.admin_pass}}">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">İsim</label>
+									<input type="text" class="form-control" id="inputEmail4" name="admin_realname" value="{{admincik.admin_realname}}">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">Soyisim</label>
+									<input type="text" class="form-control" id="inputPassword4" name="admin_surname" value={{admincik.admin_surname}}>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputAddress">Adres</label>
+								<input type="text" class="form-control" id="inputAddress" name="admin_adress" value="{{admincik.admin_adress}}">
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-4">
+									<label for="inputCity">İnstagram</label>
+									<input type="text" class="form-control" id="inputCity" name="admin_insta" value={{admincik.admin_insta}}>
+								</div>
+								<div class="form-group col-md-4">
+									<label for="inputState">Twitter</label>
+									<input type="text" class="form-control" id="inputZip" name="admin_twitter" value={{admincik.admin_twitter}}>
+								</div>
+								<div class="form-group col-md-4">
+									<label for="inputZip">Email</label>
+									<input type="text" class="form-control" id="email" name="admin_email" value={{admincik.admin_email}}>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary">Değiştir</button>
+						</form>
+				</div>	
+			</div>
+			</div>
+		</div>
+  </body>
+</html>
